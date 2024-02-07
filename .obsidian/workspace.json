@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Leetcode Notes/数组Array.md",
+                "file": "Leetcode Notes/数组 Array.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5439a7e0147bc356",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Leetcode Notes/链表 ListNode.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Leetcode Notes/数组Array.md",
+                "file": "Leetcode Notes/链表 ListNode.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Leetcode Notes/数组Array.md",
+                "file": "Leetcode Notes/链表 ListNode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Leetcode Notes/数组Array.md"
+                "file": "Leetcode Notes/链表 ListNode.md"
               }
             }
           }
@@ -146,9 +159,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b9f2c7e66a94b5ac",
+  "active": "5439a7e0147bc356",
   "lastOpenFiles": [
-    "README.md",
-    "Leetcode Notes/数组Array.md"
+    "Leetcode Notes/数组 Array.md",
+    "Leetcode Notes/链表 ListNode.md",
+    "README.md"
   ]
 }
