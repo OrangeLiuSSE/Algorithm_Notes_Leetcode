@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Leetcode Notes/链表 ListNode.md",
+                "file": "Leetcode Notes/数组 Array.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Leetcode Notes/链表 ListNode.md",
+                "file": "Leetcode Notes/数组 Array.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Leetcode Notes/链表 ListNode.md",
+                "file": "Leetcode Notes/数组 Array.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Leetcode Notes/链表 ListNode.md"
+                "file": "Leetcode Notes/数组 Array.md"
               }
             }
           }
@@ -161,8 +161,10 @@
   },
   "active": "5439a7e0147bc356",
   "lastOpenFiles": [
-    "Leetcode Notes/数组 Array.md",
     "Leetcode Notes/链表 ListNode.md",
+    "Leetcode Notes/巧妙的数值计算 Amazing Idea.md",
+    "Leetcode Notes/数组 Array.md",
+    "Leetcode Notes/哈希 HashMap.md",
     "README.md"
   ]
 }
