@@ -34,8 +34,49 @@ needle = "aabaaf"
 仍然是这个例子，我们可以知道在第一次循环中 走到 haystack\[5]和needle\[5]时两个字符不匹配，但是我们知道，既然needle能够走到needle\[5]，那么证明needle\[0-4]和haystack中所比较的字符串是相等的。也就是说 "<font color=red>aabaa</font>baaf"和 "<font color=red>aabaa</font>f"是肯定相等的，但是我们发现aabaa中， 最大相等前后缀为aa，也就是说，虽然第六位的b和f不相等了，但是前面相等的部分的最后aa和本身这个字符串的最开始两个字符aa是一样的，因此我们不需要立即回到aabaaf中第二个a来进行循环，而是尝试先将needle的下标返回到与后缀相等的前缀后的位置尝试比较，在这个例子中needle为aabaaf中的aa，因此可以将needle的下标转到b并重新与haystack\[5]进行比较，发现相等后可以继续向下比较知道needle下标指向最后一个字符。
 ## next数组求解
 
+next数组本质上就是自己与自己比较的过程，其具体的求解方法为：最长的后缀先进行比较，并一一向后推进，出现不匹配情况时，与比较其他字符串过程相同:
+```python
+def getNext(s: str):
+	head_index = 0
+	next = []
+	for tail_index in range(1, len(s)):
+		while head_index > 0 and s[tail_index] != s[head_index]:
+			head_index = next[head_index - 1]
+		if s[tail_index] != s[head_index]:
+			head_index += 1
+		next[tail_index] = head_index
+
+```
 
 
-# 查询是否存在最小字串
+## 题目解答：
 
-## 题目分析
+```python
+class Solution:
+    def getNext(self, s: str) -> List[int]:
+        s_list = list(s)
+  
+        head_index = 0
+        next = [0] * len(s_list)
+        for tail_index in range(1, len(s_list)):
+            while head_index > 0 and s_list[tail_index] != s_list[head_index]:
+                head_index = next[head_index - 1]
+            if s_list[tail_index] == s_list[head_index]:
+                head_index += 1
+            next[tail_index] = head_index
+        return next
+
+    def strStr(self, haystack: str, needle: str) -> int:
+        next = self.getNext(needle)
+        hay = list(haystack)
+        need = list(needle)
+        j = 0
+        for i in range(len(hay)):
+            while j > 0 and hay[i] != need[j]:
+                j = next[j - 1]
+            if hay[i] == need[j]:
+                j += 1
+            if j == len(need):
+                return i - len(need) + 1
+        return -1
+```
